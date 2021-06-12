@@ -4,6 +4,7 @@ public class RecipeModel {
 
  int pic;
  String text;
+    private int size;
 
     public RecipeModel(int pic, String text) {
         this.pic = pic;
@@ -24,5 +25,17 @@ public class RecipeModel {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+
+    public void remove(int newPosition) {
+
+
+        
+    }
+
+    public int size() {
+this.size=size();
+return size;
     }
 }

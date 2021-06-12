@@ -17,6 +17,7 @@ public class RecyclerItemClickListener<onItemClickListener> implements RecyclerV
     public interface OnItemClickListener{
         public void onItemClick(View view,int position);
         public void onLongItemClick(View view, int position);
+        void onNoteClick(int position);
 
     }
 

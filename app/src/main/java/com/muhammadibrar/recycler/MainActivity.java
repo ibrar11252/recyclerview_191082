@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -87,8 +88,35 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
 
 
-                        Intent intent=new Inten(MainActivity.this,ScrollingActivity.this);
+                        Intent intent=new Intent(MainActivity.this,ScrollingActivity.class);
+                        startActivity(intent);
                         break;
+
+//chck
+//case 1:
+//    Toast.makeText(MainActivity.this,"img two is clicked",Toast.LENGTH_SHORT).show();
+//    break;
+//
+//                    case 2:
+//                        Toast.makeText(MainActivity.this,"img two is clicked",Toast.LENGTH_SHORT).show();
+//                        break;
+//                    case 3:
+//                        Toast.makeText(MainActivity.this,"img three is clicked",Toast.LENGTH_SHORT).show();
+//                        break;
+//                    case 4:
+//                        Toast.makeText(MainActivity.this,"img four is clicked",Toast.LENGTH_SHORT).show();
+//                        break;
+//                    case 5:
+//                        Toast.makeText(MainActivity.this,"img fifth is clicked",Toast.LENGTH_SHORT).show();
+//                        break;
+
+
+
+
+
+
+
+
                     default:
                         throw new IllegalStateException("Unexpected value: " + position);
                 }
@@ -99,7 +127,41 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onLongItemClick(View view, int position) {
 
+
+
+        Toast.makeText(MainActivity.this, "img deleted is clicked", Toast.LENGTH_SHORT).show();
+
+
+
+
             }
+
+            @Override
+            public void onNoteClick(int position) {
+
+                Toast.makeText(MainActivity.this, "img deleted is clicked", Toast.LENGTH_SHORT).show();
+
+
+//                int newPositionosition=holder.getAbsoluteAdapterPosition();
+//
+//                model.remove(newPosition);
+//                notifyItemRemoved(newPosition);
+//                notifyItemRangeChanged(newPosition, model.size());
+            }
+
+
+//            private void removeItem(int position) {
+//                int newPosition = holder.getAdapterPosition();
+//                model.remove(newPosition);
+//                notifyItemRemoved(newPosition);
+//                notifyItemRangeChanged(newPosition, model.size());
+//            }
+
+
+
+
+
+
         }
 
         ));
